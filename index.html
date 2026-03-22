@@ -104,9 +104,9 @@
 <body class="bg-background text-on-background font-body tech-grid selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-[#071325]/80 backdrop-blur-xl border-b border-[#00C8FF]/10 shadow-[0_4px_20px_rgba(0,200,255,0.05)]">
-<div class="flex flex-wrap justify-between items-center gap-y-3 px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
-<div class="text-2xl font-black text-[#00C8FF] tracking-tighter uppercase font-headline">БАЗТИТ</div>
-<nav class="hidden md:flex flex-wrap gap-4 lg:gap-6 xl:gap-8 items-center justify-end font-headline font-bold tracking-tight uppercase text-[10px] sm:text-xs xl:text-sm max-w-2xl lg:max-w-none">
+<div class="flex items-center justify-between gap-3 px-4 sm:px-6 md:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto">
+<a class="text-xl sm:text-2xl font-black text-[#00C8FF] tracking-tighter uppercase font-headline shrink-0" href="#">БАЗТИТ</a>
+<nav class="hidden md:flex flex-wrap gap-4 lg:gap-6 xl:gap-8 items-center justify-end font-headline font-bold tracking-tight uppercase text-[10px] sm:text-xs xl:text-sm max-w-2xl lg:max-w-none" aria-label="Основная навигация">
 <a class="text-[#d7e3fc]/70 hover:text-[#FFFFFF] transition-colors" href="#stats">Показатели</a>
 <a class="text-[#d7e3fc]/70 hover:text-[#FFFFFF] transition-colors" href="#tech-core">Технологии</a>
 <a class="text-[#d7e3fc]/70 hover:text-[#FFFFFF] transition-colors" href="#how-it-works">Принцип работы</a>
@@ -116,11 +116,35 @@
 <a class="text-[#d7e3fc]/70 hover:text-[#FFFFFF] transition-colors" href="#config">Конфигурации</a>
 <a class="text-[#d7e3fc]/70 hover:text-[#FFFFFF] transition-colors" href="#contacts">Контакты</a>
 </nav>
-<a class="bg-[#00C8FF] text-[#003546] px-6 py-2 font-headline font-bold tracking-tight uppercase text-sm scale-95 active:scale-90 duration-150 transition-all hover:bg-[#00C8FF]/90" href="#contacts">
-            Связаться
-        </a>
+<div class="flex items-center gap-2 shrink-0">
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center min-h-[44px] min-w-[44px] rounded-md border border-[#00C8FF]/25 text-[#d7e3fc] hover:bg-white/5 hover:text-white transition-colors" aria-expanded="false" aria-controls="mobile-menu-drawer">
+<span class="sr-only">Открыть или закрыть меню</span>
+<span class="material-symbols-outlined text-2xl" id="icon-menu-open" aria-hidden="true">menu</span>
+<span class="material-symbols-outlined text-2xl hidden" id="icon-menu-close" aria-hidden="true">close</span>
+</button>
+<a class="inline-flex items-center justify-center min-h-[44px] px-4 sm:px-6 bg-[#00C8FF] text-[#003546] font-headline font-bold tracking-tight uppercase text-xs sm:text-sm active:scale-95 duration-150 transition-all hover:bg-[#00C8FF]/90" href="#contacts">Связаться</a>
+</div>
 </div>
 </header>
+<div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/70 opacity-0 pointer-events-none transition-opacity duration-200 md:hidden" aria-hidden="true"></div>
+<nav id="mobile-menu-drawer" class="fixed top-[4.75rem] bottom-0 right-0 z-[45] flex w-full max-w-sm translate-x-full flex-col overflow-y-auto border-l border-[#00C8FF]/20 bg-[#071325] shadow-2xl transition-transform duration-200 ease-out md:hidden px-5 py-6 pb-8" aria-label="Меню разделов" aria-hidden="true" inert>
+<div class="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+<span class="font-headline text-sm font-bold uppercase tracking-wide text-white">Разделы</span>
+<button type="button" id="mobile-menu-close-btn" class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md text-[#d7e3fc] hover:bg-white/5 hover:text-white" aria-label="Закрыть меню">
+<span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-0 font-headline text-sm font-bold uppercase tracking-tight">
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#stats">Показатели</a>
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#tech-core">Технологии</a>
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#how-it-works">Принцип работы</a>
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#recognition">Распознавание</a>
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#system-demo">Демо</a>
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#economics">Экономика</a>
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#config">Конфигурации</a>
+<a class="mobile-nav-link border-b border-white/5 py-3.5 text-[#d7e3fc] transition-colors hover:text-[#00C8FF]" href="#contacts">Контакты</a>
+</div>
+</nav>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-24 md:pt-20 overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -133,10 +157,10 @@
 <span class="material-symbols-outlined text-primary-container text-sm">precision_manufacturing</span>
 <span class="font-label text-xs tracking-widest text-primary-container uppercase">[ ИНДИВИДУАЛЬНАЯ КАСТОМИЗАЦИЯ ]</span>
 </div>
-<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-white leading-tight">
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-white leading-tight">
                 Оптический <span class="text-primary-container">фотосепаратор</span> под вашу задачу
             </h1>
-<p class="text-xl text-on-surface-variant max-w-xl">
+<p class="text-lg sm:text-xl text-on-surface-variant max-w-xl">
                 Проектирование и производство систем автоматической сортировки. Сортировка по CV, производительность 1–20+ т/ч. Стоимость решения от $10 000.
             </p>
 <div class="flex flex-wrap gap-4">
@@ -149,8 +173,8 @@
                 </a>
 </div>
 </div>
-<div class="hidden lg:block space-y-4">
-<div class="grid grid-cols-2 gap-4">
+<div class="mt-10 space-y-4 w-full max-w-lg mx-auto lg:max-w-none lg:mt-0 lg:ml-auto">
+<div class="grid grid-cols-2 gap-3 sm:gap-4">
 <div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
 <div class="font-label text-primary-container text-sm mb-2">01 / МОЩНОСТЬ</div>
 <div class="text-3xl font-headline font-bold text-white tracking-tighter">1–20+ т/ч</div>
@@ -161,17 +185,17 @@
 <div class="text-xs text-on-surface-variant uppercase mt-1">Снижение брака</div>
 </div>
 </div>
-<div class="rounded-lg overflow-hidden border border-primary/30 aspect-video max-w-lg ml-auto shadow-[0_0_30px_rgba(0,200,255,0.15)]">
+<div class="rounded-lg overflow-hidden border border-primary/30 aspect-video w-full max-w-lg mx-auto lg:ml-auto shadow-[0_0_30px_rgba(0,200,255,0.15)]">
 <video class="w-full h-full object-cover" muted loop playsinline autoplay poster="separator-poster.jpg">
 <source src="separator-example.mp4" type="video/mp4"/>
 </video>
 </div>
-<p class="font-label text-[10px] text-primary-container/80 text-right max-w-lg ml-auto uppercase tracking-wider">Фрагмент работы · <a class="underline hover:text-primary-container" href="#system-demo">полное демо ниже</a></p>
+<p class="font-label text-[10px] text-primary-container/80 text-center lg:text-right max-w-lg mx-auto lg:ml-auto uppercase tracking-wider">Фрагмент работы · <a class="underline hover:text-primary-container" href="#system-demo">полное демо ниже</a></p>
 </div>
 </div>
 </section>
 <!-- StatBar -->
-<section class="bg-surface-container-lowest border-y border-outline-variant/15 py-10" id="stats">
+<section class="bg-surface-container-lowest border-y border-outline-variant/15 py-8 md:py-10" id="stats">
 <div class="max-w-screen-2xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
 <div class="text-center md:text-left">
 <div class="font-label text-primary text-xs tracking-[0.2em] mb-2">ПРОИЗВОДИТЕЛЬНОСТЬ</div>
@@ -192,7 +216,7 @@
 </div>
 </section>
 <!-- Technology Core Section -->
-<section class="py-24 px-6 bg-surface border-y border-outline-variant/10" id="tech-core">
+<section class="py-16 md:py-24 px-6 bg-surface border-y border-outline-variant/10" id="tech-core">
 <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="space-y-6">
 <h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter">Ядро технологии — ваша готовая система</h2>
@@ -231,7 +255,7 @@
 </div>
 </section>
 <!-- How it Works (from index2) -->
-<section class="py-24 bg-surface" id="how-it-works">
+<section class="py-16 md:py-24 bg-surface" id="how-it-works">
 <div class="max-w-[1440px] mx-auto px-6">
 <h2 class="text-4xl font-headline font-extrabold text-white text-center mb-20 uppercase tracking-widest">Принцип работы системы</h2>
 <div class="relative grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -265,7 +289,7 @@
 </div>
 </section>
 <!-- Recognition Capabilities -->
-<section class="py-24 px-6 bg-surface-container-low relative overflow-hidden" id="recognition">
+<section class="py-16 md:py-24 px-6 bg-surface-container-low relative overflow-hidden" id="recognition">
 <div class="max-w-screen-2xl mx-auto">
 <div class="mb-16 text-center lg:text-left">
 <h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter mb-4">Что мы распознаем</h2>
@@ -344,7 +368,7 @@
 </div>
 </section>
 <!-- System demo video (accent) -->
-<section class="py-24 bg-[#030e20] relative overflow-hidden" id="system-demo">
+<section class="py-16 md:py-24 bg-[#030e20] relative overflow-hidden" id="system-demo">
 <div class="absolute right-0 top-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4 pointer-events-none"></div>
 <div class="max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
 <div>
@@ -380,7 +404,7 @@
 </div>
 </section>
 <!-- Economic Effect (index2) -->
-<section class="py-24 bg-surface" id="economics">
+<section class="py-16 md:py-24 bg-surface" id="economics">
 <div class="max-w-[1440px] mx-auto px-6">
 <h2 class="text-3xl md:text-5xl font-headline font-extrabold text-white text-center mb-16 uppercase">Экономический эффект</h2>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -408,7 +432,7 @@
 </div>
 </section>
 <!-- Configuration Examples (index3) -->
-<section class="py-24 px-6 bg-surface" id="config">
+<section class="py-16 md:py-24 px-6 bg-surface" id="config">
 <div class="max-w-screen-2xl mx-auto">
 <div class="mb-16">
 <h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter mb-4">Примеры конфигураций</h2>
@@ -450,7 +474,7 @@
 </div>
 </section>
 <!-- Visual Control / Software (index terminal block) -->
-<section class="py-24 px-6 bg-surface-container-low" id="software">
+<section class="py-16 md:py-24 px-6 bg-surface-container-low" id="software">
 <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-16 items-center">
 <div class="w-full md:w-1/2 order-2 md:order-1 relative">
 <div class="bg-black p-4 rounded-lg border border-outline-variant/30 shadow-2xl">
@@ -502,7 +526,7 @@
 </div>
 </section>
 <!-- Advantages (index3) -->
-<section class="py-24 px-6" id="advantages">
+<section class="py-16 md:py-24 px-6" id="advantages">
 <div class="max-w-screen-2xl mx-auto">
 <h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter mb-16">Наши преимущества</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -540,7 +564,7 @@
 </div>
 </section>
 <!-- Comparison Table (index2) -->
-<section class="py-24 bg-surface-container-low" id="market">
+<section class="py-16 md:py-24 bg-surface-container-low" id="market">
 <div class="max-w-[1440px] mx-auto px-6">
 <h2 class="text-4xl font-headline font-extrabold text-white text-center mb-16 uppercase">Сравнение с рынком</h2>
 <div class="overflow-x-auto">
@@ -584,7 +608,7 @@
 </div>
 </section>
 <!-- Process (index2) -->
-<section class="py-24 bg-surface-container-lowest" id="process">
+<section class="py-16 md:py-24 bg-surface-container-lowest" id="process">
 <div class="max-w-[1440px] mx-auto px-6">
 <h2 class="text-4xl font-headline font-extrabold text-white text-center mb-20">Этапы реализации</h2>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -612,8 +636,8 @@
 </div>
 </section>
 <!-- Contact Section (index2 layout + clickable links) -->
-<section class="py-24 bg-surface relative overflow-hidden" id="contacts">
-<div class="max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 bg-surface-container-low p-12 rounded-lg border border-primary/10">
+<section class="py-16 md:py-24 bg-surface relative overflow-hidden" id="contacts">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 bg-surface-container-low p-6 sm:p-8 md:p-12 rounded-lg border border-primary/10">
 <div>
 <h2 class="text-4xl font-headline font-extrabold text-white mb-8 uppercase">Связаться с инженером</h2>
 <div class="space-y-8">
@@ -717,4 +741,61 @@
             </p>
 </div>
 </footer>
+<script>
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var drawer = document.getElementById('mobile-menu-drawer');
+  var backdrop = document.getElementById('mobile-menu-backdrop');
+  var closeBtn = document.getElementById('mobile-menu-close-btn');
+  var openIcon = document.getElementById('icon-menu-open');
+  var closeIcon = document.getElementById('icon-menu-close');
+  if (!btn || !drawer || !backdrop) return;
+
+  function isOpen() {
+    return !drawer.classList.contains('translate-x-full');
+  }
+
+  function openMenu() {
+    drawer.classList.remove('translate-x-full');
+    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop.classList.add('opacity-100');
+    backdrop.setAttribute('aria-hidden', 'false');
+    drawer.setAttribute('aria-hidden', 'false');
+    drawer.removeAttribute('inert');
+    btn.setAttribute('aria-expanded', 'true');
+    if (openIcon) openIcon.classList.add('hidden');
+    if (closeIcon) closeIcon.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    drawer.classList.add('translate-x-full');
+    backdrop.classList.add('opacity-0', 'pointer-events-none');
+    backdrop.classList.remove('opacity-100');
+    backdrop.setAttribute('aria-hidden', 'true');
+    drawer.setAttribute('aria-hidden', 'true');
+    drawer.setAttribute('inert', '');
+    btn.setAttribute('aria-expanded', 'false');
+    if (openIcon) openIcon.classList.remove('hidden');
+    if (closeIcon) closeIcon.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', function () {
+    if (isOpen()) closeMenu();
+    else openMenu();
+  });
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+  drawer.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen()) closeMenu();
+  });
+  window.addEventListener('resize', function () {
+    if (window.matchMedia('(min-width: 768px)').matches && isOpen()) closeMenu();
+  });
+})();
+</script>
 </body></html>
