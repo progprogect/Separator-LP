@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ООО «БАЗТИТ» — Промышленные фотосепараторы и оптическая сортировка</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(10, 22, 40, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .tech-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 200, 255, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .corner-accent {
+            position: relative;
+        }
+        .corner-accent::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #00C8FF;
+            border-left: 2px solid #00C8FF;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-surface-variant": "#bcc8d0",
+                "on-secondary-fixed-variant": "#723600",
+                "on-error": "#690005",
+                "error": "#ffb4ab",
+                "on-secondary-fixed": "#311300",
+                "surface-container-highest": "#2a3548",
+                "on-background": "#d7e3fc",
+                "surface-container-low": "#101c2e",
+                "background": "#0A1628",
+                "surface-tint": "#00C8FF",
+                "primary": "#00C8FF",
+                "surface-container-lowest": "#030e20",
+                "secondary-fixed-dim": "#ffb787",
+                "on-surface": "#d7e3fc",
+                "surface-container": "#142032",
+                "secondary": "#ffb787",
+                "on-tertiary-container": "#0043a5",
+                "on-primary": "#003546",
+                "outline-variant": "#3c484f",
+                "surface-container-high": "#1f2a3d",
+                "on-secondary-container": "#461f00",
+                "primary-fixed": "#bee9ff",
+                "on-primary-container": "#001f2a",
+                "error-container": "#93000a",
+                "surface-bright": "#2e394d",
+                "secondary-fixed": "#ffdcc7",
+                "tertiary-fixed": "#dae2ff",
+                "inverse-surface": "#d7e3fc",
+                "tertiary-container": "#9eb8ff",
+                "on-error-container": "#ffdad6",
+                "secondary-container": "#e1720e",
+                "outline": "#86939a",
+                "tertiary": "#c7d4ff",
+                "on-secondary": "#502400",
+                "on-tertiary": "#002c71",
+                "primary-fixed-dim": "#68d3ff",
+                "on-primary-fixed": "#001f2a",
+                "surface-variant": "#2a3548",
+                "inverse-primary": "#006684",
+                "inverse-on-surface": "#253144",
+                "on-tertiary-fixed": "#001947",
+                "primary-container": "#00C8FF",
+                "on-tertiary-fixed-variant": "#00419f",
+                "surface-dim": "#0A1628",
+                "surface": "#0A1628",
+                "on-primary-fixed-variant": "#004d64",
+                "tertiary-fixed-dim": "#b1c5ff"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["JetBrains Mono"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body tech-grid selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0A1628]/80 backdrop-blur-md border-b border-white/5 shadow-[0_4px_20px_rgba(0,200,255,0.1)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-white tracking-tighter uppercase font-headline">БАЗТИТ</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-headline font-bold tracking-tight uppercase text-sm text-[#d7e3fc]/60 hover:text-white transition-colors" href="#how-it-works">Принцип работы</a>
+<a class="font-headline font-bold tracking-tight uppercase text-sm text-[#d7e3fc]/60 hover:text-white transition-colors" href="#config">Комплектации</a>
+<a class="font-headline font-bold tracking-tight uppercase text-sm text-[#d7e3fc]/60 hover:text-white transition-colors" href="#solutions">Примеры решений</a>
+<a class="font-headline font-bold tracking-tight uppercase text-sm text-[#d7e3fc]/60 hover:text-white transition-colors" href="#advantages">Преимущества</a>
+<a class="font-headline font-bold tracking-tight uppercase text-sm text-[#d7e3fc]/60 hover:text-white transition-colors" href="#contacts">Контакты</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold tracking-tight uppercase text-sm scale-95 active:scale-90 transition-transform hover:bg-[#00C8FF]/90">
+            Запросить КП
+        </button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Apple detection computer vision system" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida/ADBb0ug0sp0h-Gd_RjYzjuL0zOAw-mI7ljJozCDTRv-yvOdN9d006POW00zxVnaVwgCeNS3CDtPet8WyEoQEQEsxU3viflIpHHkyMRex8GspZbjP50Cb2Zkfk3HmSvSi3ezWPE_HO-0UhGxzhC-vhZ_HsjYm5l99updfoCRcYLVlVjbY3yhBhS1Mupes787yVjjcPj5wwQtsgGIbQazq39GdzLXfv64wZcSEg0DU2OyXjwQxXg4qt1C0Ga4L4hqDsdRGBl9jf0srhR9FQjY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-screen-2xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high border border-primary/20">
+<span class="material-symbols-outlined text-primary-container text-sm">precision_manufacturing</span>
+<span class="font-label text-xs tracking-widest text-primary-container uppercase">[ ИНДИВИДУАЛЬНАЯ КАСТОМИЗАЦИЯ ПОД ВАШ ПРОДУКТ ]</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-white leading-tight">
+                Оптический <span class="text-primary-container">фотосепаратор</span> под вашу задачу
+            </h1>
+<p class="text-xl text-on-surface-variant max-w-xl">
+                Проектирование и производство систем автоматической сортировки. Сортировка по CV, производительность 1–20+ т/ч. Стоимость решения от $10 000.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 font-headline font-bold tracking-tight uppercase text-base hover:bg-primary-container/90 transition-all flex items-center gap-3">
+                    Получить расчет
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-outline-variant text-white px-8 py-4 font-headline font-bold tracking-tight uppercase text-base hover:bg-white/5 transition-all">
+                    Техническая спецификация
+                </button>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container-low border-l-2 border-primary-container">
+<div class="font-label text-primary-container text-sm mb-2">01 / МОЩНОСТЬ</div>
+<div class="text-3xl font-headline font-bold text-white tracking-tighter">1–20+ т/ч</div>
+</div>
+<div class="p-6 bg-surface-container-low border-l-2 border-secondary-container">
+<div class="font-label text-secondary-container text-sm mb-2">02 / ЭФФЕКТИВНОСТЬ</div>
+<div class="text-3xl font-headline font-bold text-white tracking-tighter">40–70%</div>
+<div class="text-xs text-on-surface-variant uppercase mt-1">Снижение брака</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- StatBar -->
+<section class="bg-surface-container-lowest border-y border-outline-variant/15 py-10">
+<div class="max-w-screen-2xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center md:text-left">
+<div class="font-label text-primary text-xs tracking-[0.2em] mb-2">ПРОИЗВОДИТЕЛЬНОСТЬ</div>
+<div class="text-3xl font-headline font-extrabold text-white">1–20+ т/ч</div>
+</div>
+<div class="text-center md:text-left">
+<div class="font-label text-primary text-xs tracking-[0.2em] mb-2">ОКУПАЕМОСТЬ</div>
+<div class="text-3xl font-headline font-extrabold text-white">от $10 000</div>
+</div>
+<div class="text-center md:text-left">
+<div class="font-label text-primary text-xs tracking-[0.2em] mb-2">ТОЧНОСТЬ</div>
+<div class="text-3xl font-headline font-extrabold text-white">99.9%</div>
+</div>
+<div class="text-center md:text-left">
+<div class="font-label text-primary text-xs tracking-[0.2em] mb-2">СЕРВИС</div>
+<div class="text-3xl font-headline font-extrabold text-white">1–3 ДНЯ</div>
+</div>
+</div>
+</section>
+<!-- Configuration Examples Block -->
+<section class="py-24 px-6 bg-surface" id="config">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter mb-4">Примеры конфигураций</h2>
+<div class="h-1 w-24 bg-primary-container"></div>
+<p class="text-on-surface-variant mt-6 max-w-2xl">Мы не продаем стандартные коробки. Мы проектируем корпус, систему захвата и механизмы сброса индивидуально под ваши габариты и каждый специфический продукт.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Config 1 -->
+<div class="group bg-surface-container-low overflow-hidden corner-accent">
+<div class="aspect-video relative">
+<img alt="Large scale industrial sorter" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ugIPC1RdgvrBS3Bih6qM5B1DNpqhGarA3rAsMP4Cen-M-SwZgx4mT24zV_2RIu7G4gjfxpiEDtBWbD1DYZdhwno7LNXW671Q06sstXaXw0QZ0wFhgwYE9spvItYCeFlb2YhGf2fMeN-GiBlzp8aGOofGv1N23R655Uwy-qJ7kDmeF5cTiheXNav4gczJqHW0zJEhEnkFOKlp_pVy2p_En1o4BUvkB_9H5MvitutAx7TdsRp1uhI8i5Y5Pqyp5O60QBV01s7MaMVYVM"/>
+<div class="absolute top-4 right-4 font-label text-primary-container">[ 01 ]</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-headline font-bold text-white mb-3">Адаптация под производственную линию</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Интеграция в существующие конвейерные системы любой сложности. Индивидуальное проектирование корпуса под ваши площади.</p>
+</div>
+</div>
+<!-- Config 2 -->
+<div class="group bg-surface-container-low overflow-hidden corner-accent">
+<div class="aspect-video relative">
+<img alt="Radial apple sorting machine" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uhUVh28yZe4nJqOR_RhcXL53jCBldMFtIJ14rQ3lpmt6LrUpvi_zP2Ko_dVMmGtF6MQLWGnZbz_LM3qIC_0NBF9F5QC440SS3qlhjRK5rfK7A82GY6kQJyVQi-zOek9LRrw4ib4a8bvewk0JyP8UBb-ZMAfOawXojNiXVQ95-As_ltWZWFq73FMmsfELcRMphr_quuALVhmwPyfu-cgHg_YKQVeQ8jkt3SfQFQ-J1Z7rT2XsSf4yGOLk3eV8uUYwRU12AzYXQ-hMbs"/>
+<div class="absolute top-4 right-4 font-label text-primary-container">[ 02 ]</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-headline font-bold text-white mb-3">Кастомизация механизмов сброса</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Подбор пневматических, механических или радиальных эжекторов в зависимости от веса, хрупкости и формы вашего продукта.</p>
+</div>
+</div>
+<!-- Config 3 -->
+<div class="group bg-surface-container-low overflow-hidden corner-accent">
+<div class="aspect-video relative">
+<img alt="Conveyor belt apple sorter" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uhl5fCplv33WjB_9oneygWtkIQugJ_7RXaE50gwTFDW_eOwK16kecTe-cT_yomrcT2WHknSdu0aS7PBvZdClfJq5w7qxEP-sTenhPCQ1I2L259hjywXyclNwN2y-klaowZgDMWXfqx1VX-lNoF1BjZLdC7NubSyRTAT59N4LzVBIJf2ddolu01jGPR8fdxh0G-T2D1JESwZsIvrCUb6XSvfIJNrlRhxWbUC0HodFKfF9LWn2qM8ieyAs5xBXSJPXrMeN-jogk9CcQ"/>
+<div class="absolute top-4 right-4 font-label text-primary-container">[ 03 ]</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-headline font-bold text-white mb-3">Проектирование под задачу</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Создание уникальных форм-факторов для работы с крупногабаритными продуктами (фрукты, овощи, вторичное сырье).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recognition Capabilities -->
+<section class="py-24 px-6 bg-surface-container-low relative overflow-hidden">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-12">
+<div>
+<h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter mb-4">Что мы распознаем</h2>
+<p class="text-on-surface-variant">Наше программное обеспечение настраивается на любые визуальные аномалии и параметры продукта.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex items-start gap-4 p-4 bg-surface/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-2xl">palette</span>
+<div>
+<h4 class="text-white font-headline font-bold text-base">Цвет и спектр</h4>
+<p class="text-on-surface-variant text-xs mt-1">Отклонения в оттенках, спелость, нежелательная окраска.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-2xl">square_foot</span>
+<div>
+<h4 class="text-white font-headline font-bold text-base">Геометрия и размер</h4>
+<p class="text-on-surface-variant text-xs mt-1">Сортировка по калибру, форме, кривизне и целостности.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-2xl">texture</span>
+<div>
+<h4 class="text-white font-headline font-bold text-base">Текстурные дефекты</h4>
+<p class="text-on-surface-variant text-xs mt-1">Трещины, вмятины, сколы и повреждения поверхности.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-2xl">category</span>
+<div>
+<h4 class="text-white font-headline font-bold text-base">Категории и состав</h4>
+<p class="text-on-surface-variant text-xs mt-1">Наличие/отсутствие элементов, посторонние включения.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="space-y-4">
+<div class="aspect-[4/3] bg-black overflow-hidden border border-outline-variant/30 relative">
+<img alt="Industrial camera" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uj6WUWPg1ftq3pfJTx7rjPN4a7aigDYdGCix4eQbFrUfmZ8aLNeRcimlJCI7tWMoLd50auzytWfc_4RsBC96V0Ug_EqcdCgNSvZmTqAczaW1sTNUUqAbyKm07QervVQBr7rVCJPx5LM_YkHUyQlh96CpgvmtPbydBSny_pbEm_i8P9w6MiO5rpJqI3EjdrC_d91QqaX-3L1_n9pvHMbpIJDXkc0WUU75Ng3822TYL1J1PlRHUhLYTGvbiT7S548VO1Ttwjo-0AvlVs"/>
+<div class="absolute bottom-4 left-4 font-label text-[10px] text-primary-container bg-black/80 px-2 py-1">ПРОМЫШЛЕННАЯ КАМЕРА ВЫСОКОГО РАЗРЕШЕНИЯ</div>
+</div>
+<div class="aspect-[16/6] bg-black overflow-hidden border border-outline-variant/30 relative">
+<img alt="Recognition algorithm" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ug_YaglgReUJfHTmgW4mg9PTUqBjlAUtSnGr1aCpHZtFjp-pD8bK6FK5rVQFDgZeXC61-atV2evI2l5ZFQiqqR8zeRfZDrQIew_x_PvWcM76qyomHSYIDrUySleP7sdbQcSj234Nt7qhN85_pBE9eY13ysI37AltcRwVNXQ1DFOznQ6swocJ7zsatp3Q0W0b8HeRlqetlkYBsRfB4-H_dXEX3QbPLtdRoxuHobCEjbbzp4kTIuQUzyJ-H_Bnn4mR9veuu0ecUySsWc"/>
+<div class="absolute bottom-4 left-4 font-label text-[10px] text-primary-container bg-black/80 px-2 py-1">АЛГОРИТМ РАСПОЗНАВАНИЯ: АНАЛИЗ NG/OK</div>
+</div>
+</div>
+<!-- HUD Overlay Elements -->
+<div class="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-primary-container opacity-50 pointer-events-none"></div>
+<div class="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-primary-container opacity-50 pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Visual Control / Software -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<img alt="Dashboard analytics" class="rounded-lg shadow-2xl border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfpxJ2-2-xkSLcOIBI9eskywFvjNXCzDb3sTEGk69ha0dK5rEC2sxW-eH_jC5V_efTxO3Aatb5GbumoJ0TU-jnWGAnttLSPOxH-1vxXztqyFB4rUJev0UyxQOJqXmi4ZY9W9n6u5QPCxALt_V-g4CgxnemnfPLbRaAOjEWzlHoK0wfrAG4AlbvymQ7oHCem7PTEABZOtljkj7dJAtEIlAXE4_inAdczjkYuKoP9DbPMucrjbL8TyyBj95E9ZzOBOLZfKh92dw9YJ58"/>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 space-y-6">
+<h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter">Собственное ПО — сердце системы</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                Мы разрабатываем программное обеспечение в Беларуси. Это позволяет нам адаптировать алгоритмы распознавания под уникальные продукты (специфические виды пластика, редкие сорта семян), которые не поддерживаются стандартными решениями.
+            </p>
+<ul class="space-y-4 font-label text-sm text-primary">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-base">check_circle</span> 
+                    ПОЛНЫЙ КОНТРОЛЬ ПАРАМЕТРОВ
+                </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-base">check_circle</span> 
+                    ОТСУТСТВИЕ САНКЦИОННЫХ РИСКОВ
+                </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-base">check_circle</span> 
+                    УДАЛЕННАЯ ПОДДЕРЖКА 24/7
+                </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Comparison Table -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto">
+<h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter text-center mb-16">Сравнение решений</h2>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-primary/20">
+<th class="p-6 text-left font-headline font-bold text-white uppercase tracking-widest text-sm">Параметр</th>
+<th class="p-6 text-center font-headline font-bold text-primary-container uppercase tracking-widest text-sm">БАЗТИТ</th>
+<th class="p-6 text-center font-headline font-bold text-on-surface-variant uppercase tracking-widest text-sm">TOMRA / BÜHLER</th>
+<th class="p-6 text-center font-headline font-bold text-on-surface-variant uppercase tracking-widest text-sm">КИТАЙ</th>
+</tr>
+</thead>
+<tbody class="font-body text-on-surface">
+<tr class="border-b border-outline-variant/10">
+<td class="p-6 font-label text-xs uppercase text-on-surface-variant">Кастомизация</td>
+<td class="p-6 text-center text-white font-bold bg-primary/5">100% (Проектирование с 0)</td>
+<td class="p-6 text-center">Ограничена моделями</td>
+<td class="p-6 text-center">Отсутствует</td>
+</tr>
+<tr class="bg-surface-container/50 border-b border-outline-variant/10">
+<td class="p-6 font-label text-xs uppercase text-on-surface-variant">Программное обеспечение</td>
+<td class="p-6 text-center text-white font-bold bg-primary/5">Собственное ПО (РБ)</td>
+<td class="p-6 text-center">Закрытое (ЕС/США)</td>
+<td class="p-6 text-center">Стандартное</td>
+</tr>
+<tr class="border-b border-outline-variant/10">
+<td class="p-6 font-label text-xs uppercase text-on-surface-variant">Стоимость</td>
+<td class="p-6 text-center text-white font-bold bg-primary/5">от $10 000</td>
+<td class="p-6 text-center">от $60 000+</td>
+<td class="p-6 text-center">от $15 000</td>
+</tr>
+<tr class="bg-surface-container/50">
+<td class="p-6 font-label text-xs uppercase text-on-surface-variant">Срок сервиса</td>
+<td class="p-6 text-center text-white font-bold bg-primary/5">1–3 дня</td>
+<td class="p-6 text-center">от 2 недель</td>
+<td class="p-6 text-center">Непредсказуемо</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Advantages -->
+<section class="py-24 px-6" id="advantages">
+<div class="max-w-screen-2xl mx-auto">
+<h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter mb-16">Наши преимущества</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="p-8 bg-surface-container-high corner-accent">
+<span class="font-label text-primary-container mb-4 block">[ 01 ]</span>
+<h3 class="text-xl font-headline font-bold text-white mb-3">Окупаемость 12-24 мес</h3>
+<p class="text-on-surface-variant text-sm">Высокая точность сортировки и доступная цена обеспечивают кратчайшие сроки возврата инвестиций.</p>
+</div>
+<div class="p-8 bg-surface-container-high corner-accent">
+<span class="font-label text-primary-container mb-4 block">[ 02 ]</span>
+<h3 class="text-xl font-headline font-bold text-white mb-3">Сервис 1-3 дня</h3>
+<p class="text-on-surface-variant text-sm">Собственные инженеры в регионе. Оперативное обслуживание и наличие запчастей без долгого ожидания.</p>
+</div>
+<div class="p-8 bg-surface-container-high corner-accent">
+<span class="font-label text-primary-container mb-4 block">[ 03 ]</span>
+<h3 class="text-xl font-headline font-bold text-white mb-3">Адаптация под вашу линию</h3>
+<p class="text-on-surface-variant text-sm">Мы встраиваем решение в ваш существующий техпроцесс, минимизируя изменения в цеху.</p>
+</div>
+<div class="p-8 bg-surface-container-high corner-accent">
+<span class="font-label text-primary-container mb-4 block">[ 04 ]</span>
+<h3 class="text-xl font-headline font-bold text-white mb-3">Собственное ПО (РБ)</h3>
+<p class="text-on-surface-variant text-sm">Гибкая настройка под любой тип дефектов. Гарантия стабильности, обновлений и техподдержки.</p>
+</div>
+<div class="p-8 bg-surface-container-high corner-accent">
+<span class="font-label text-primary-container mb-4 block">[ 05 ]</span>
+<h3 class="text-xl font-headline font-bold text-white mb-3">100% кастомизация</h3>
+<p class="text-on-surface-variant text-sm">Проектируем габариты, форму и тип эжекторов под конкретные задачи каждого заказчика.</p>
+</div>
+<div class="p-8 bg-surface-container-high corner-accent">
+<span class="font-label text-primary-container mb-4 block">[ 06 ]</span>
+<h3 class="text-xl font-headline font-bold text-white mb-3">Цена от $10k</h3>
+<p class="text-on-surface-variant text-sm">Оптимальное соотношение цены и качества за счет локальной разработки и производства.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacts -->
+<section class="py-24 px-6 bg-surface-container-lowest" id="contacts">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="space-y-8">
+<h2 class="text-4xl font-headline font-extrabold text-white tracking-tighter">Свяжитесь с нами</h2>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-primary-container">call</span>
+</div>
+<div>
+<p class="text-on-surface-variant text-xs uppercase font-label">Телефон</p>
+<a class="text-white font-headline font-bold text-xl hover:text-primary transition-colors" href="tel:+375255092206">+375 25 509-22-06</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-primary-container">mail</span>
+</div>
+<div>
+<p class="text-on-surface-variant text-xs uppercase font-label">Почта</p>
+<a class="text-white font-headline font-bold text-xl hover:text-primary transition-colors" href="mailto:progprogect@gmail.com">progprogect@gmail.com</a>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="flex-1 bg-[#229ED9] text-white py-4 font-headline font-bold uppercase text-center flex items-center justify-center gap-2 hover:opacity-90 transition-all" href="https://t.me/+375255092206">
+                    Telegram
+                </a>
+<a class="flex-1 bg-[#25D366] text-white py-4 font-headline font-bold uppercase text-center flex items-center justify-center gap-2 hover:opacity-90 transition-all" href="https://wa.me/375255092206">
+                    WhatsApp
+                </a>
+</div>
+</div>
+<div class="glass-panel p-10 border border-outline-variant/30">
+<h3 class="text-2xl font-headline font-bold text-white mb-6">Заказать консультацию</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase mb-2">Ваше имя</label>
+<input class="w-full bg-surface border border-outline-variant p-4 text-white focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all" type="text"/>
+</div>
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase mb-2">Номер телефона</label>
+<input class="w-full bg-surface border border-outline-variant p-4 text-white focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all" type="tel"/>
+</div>
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase mb-2">Опишите ваш продукт</label>
+<textarea class="w-full bg-surface border border-outline-variant p-4 text-white focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all h-32"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-headline font-bold uppercase tracking-widest hover:bg-primary-container/90 transition-all">
+                    Отправить запрос
+                </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0A1628] w-full py-12 px-6 border-t border-[#00C8FF]/15">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="text-lg font-bold text-white mb-4 uppercase font-headline tracking-tighter">БАЗТИТ</div>
+<p class="font-label text-xs tracking-wider uppercase text-[#d7e3fc]/50 leading-relaxed">
+                    Промышленные фотосепараторы высшего класса точности. Разработка и производство.
+                </p>
+</div>
+<div>
+<h4 class="font-label text-xs font-bold text-primary mb-6 uppercase">Навигация</h4>
+<ul class="space-y-3 font-label text-xs tracking-wider uppercase text-[#d7e3fc]/40">
+<li><a class="hover:text-[#00C8FF] hover:translate-x-1 transition-transform inline-block" href="#how-it-works">Принцип работы</a></li>
+<li><a class="hover:text-[#00C8FF] hover:translate-x-1 transition-transform inline-block" href="#config">Комплектации</a></li>
+<li><a class="hover:text-[#00C8FF] hover:translate-x-1 transition-transform inline-block" href="#solutions">Примеры решений</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-xs font-bold text-primary mb-6 uppercase">Разделы</h4>
+<ul class="space-y-3 font-label text-xs tracking-wider uppercase text-[#d7e3fc]/40">
+<li><a class="hover:text-[#00C8FF] hover:translate-x-1 transition-transform inline-block" href="#advantages">Преимущества</a></li>
+<li><a class="hover:text-[#00C8FF] hover:translate-x-1 transition-transform inline-block" href="#contacts">Контакты</a></li>
+<li><a class="hover:text-[#00C8FF] hover:translate-x-1 transition-transform inline-block" href="#">Реквизиты</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-xs font-bold text-primary mb-6 uppercase">Юридическая информация</h4>
+<p class="font-label text-xs tracking-wider uppercase text-[#d7e3fc]/30 leading-loose">
+                    ООО «БАЗТИТ»<br/>
+                    УНП: [ИНФОРМАЦИЯ_ОТСУТСТВУЕТ]<br/>
+                    РБ, 2024
+                </p>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-label text-xs tracking-wider uppercase text-[#d7e3fc]/50 text-center md:text-left">
+                © 2024 ООО «БАЗТИТ». Промышленные фотосепараторы высшего класса точности.
+            </div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-[#d7e3fc]/30 text-lg">shield</span>
+<span class="material-symbols-outlined text-[#d7e3fc]/30 text-lg">public</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
